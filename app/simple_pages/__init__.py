@@ -19,6 +19,7 @@ def about():
     except TemplateNotFound:
         abort(404)
 
+# this creates route for welcome page
 @simple_pages.route('/welcome')
 def welcome():
     try:

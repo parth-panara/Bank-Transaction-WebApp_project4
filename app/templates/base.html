@@ -47,8 +47,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav mr-auto">
                         {% if current_user.is_authenticated %}
-                            <li class="nav-item" class="nav-link active"href="/dashboard">
-                            {{ render_nav_item('auth.dashboard','Dashboard' ) }}</li>
+                             <li class="nav-item" class="nav-link active"href="/dashboard">
+                             {{ render_nav_item('auth.dashboard','Dashboard' ) }}</li>
                         {% else %}
                             <li class="nav-item " class="nav-link active "href="/">
                             {{ render_nav_item('simple_pages.index', 'Home') }}
@@ -76,7 +76,7 @@
 
 
 
-                                <li><a class="dropdown-item" href="{{ url_for("auth.logout") }}">Logout</a></li>
+
                             </ul>
 
                         </li>

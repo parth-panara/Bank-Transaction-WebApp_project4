@@ -35,12 +35,13 @@ def register():
             return redirect(url_for('auth.login'), 302)
     return render_template('register.html', form=form)
 
+# this code creates a route with login wtf form
 
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
     form = login_form()
-    if current_user.is_authenticated:
-        return redirect(url_for('auth.dashboard'))
+
+
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None or not user.check_password(form.password.data):
@@ -52,7 +53,7 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
-            return redirect(url_for('auth.dashboard'))
+
     return render_template('login.html', form=form)
 
 

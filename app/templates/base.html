@@ -68,10 +68,13 @@
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 My Account
                             </a>
-                              <li><a class="dropdown-item " href="{{ url_for("auth.edit_profile") }}">Manage
-                                    Profile</a></li>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink ">
 
+                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink ">
+                                <li><a class="dropdown-item " href="{{ url_for("auth.edit_profile") }}">Manage
+                                    Profile</a></li>
+
+                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage
+                                    Account</a></li>
 
 
 

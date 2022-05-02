@@ -68,3 +68,17 @@ def test_login_and_its_redirect_to_dashboard(client, application):
     html = response.get_data(as_text=True)
     assert '<p>Welcome: parth@webizly.com!</p>' in html
 
+#user access deny to the dashboard test and get and error#9
+def user_dashboard_access_deny(client):
+
+    response = client.get("/dashboard")
+    assert response.status_code == 403
+    return client.get('/dashboard', follow_redirects=False)
+
+#user access deny to the dashboard test and return to the login page#9
+def test_deny_access_dashboard_page_without_login(client):
+    response = client.get('/dashboard', follow_redirects=True)
+    assert response.status_code == 200
+    assert response.request.path == '/login'
+    html = response.get_data(as_text=True)
+    assert 'Please log in to access this page.' in html

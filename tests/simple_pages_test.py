@@ -34,7 +34,7 @@ def test_request_request(client):
     assert response.status_code == 200
     assert b"Register" in response.data
 
-# check if login page works #
+# check if login page works #7
 def test_request_login(client):
     """This makes the login page"""
     response = client.get("/login")

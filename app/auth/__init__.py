@@ -108,7 +108,7 @@ def edit_account():
 
 
 
-#You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
+# These functions below are for user management functions, user can use it after login in the app
 
 @auth.route('/users')
 @login_required

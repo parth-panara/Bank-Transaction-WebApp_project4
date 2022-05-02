@@ -1,4 +1,8 @@
 """This test the homepage"""
+from flask import Flask
+import json
+
+from app.auth import browse_users
 
 def test_request_main_menu_links(client):
     """This makes the index page"""
@@ -23,3 +27,15 @@ def test_user_manage_account(client, application):
         'confirm': 'testtest12'
     }, follow_redirects=True)
     assert response.status_code == 200
+
+
+# user management routes checked on manage test#13
+
+def test_user_user_management(client):
+    response = client.get('/users', follow_redirects=True)
+    assert response.status_code == 200
+    assert response.request.path == '/login'
+    html = response.get_data(as_text=True)
+    assert '<h2>Login</h2>' in html
+
+

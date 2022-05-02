@@ -18,7 +18,7 @@
         {% endblock %}
 
         <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo2.jpg') }}">
-        <title>IS601_Parth's Music</title>
+        <title>IS601_Parth's Transaction</title>
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 
     {% endblock %}
@@ -76,10 +76,10 @@
                                 <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage
                                     Account</a></li>
 
+                                <li><a class="dropdown-item" href="{{ url_for("auth.browse_users") }}">User Management</a></li>
 
 
-
-                               <li><a class="dropdown-item" href="{{ url_for("auth.logout") }}">Logout</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for("auth.logout") }}">Logout</a></li>
 
                             </ul>
 

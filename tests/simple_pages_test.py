@@ -33,3 +33,10 @@ def test_request_request(client):
     response = client.get("/register")
     assert response.status_code == 200
     assert b"Register" in response.data
+
+# check if login page works #
+def test_request_login(client):
+    """This makes the login page"""
+    response = client.get("/login")
+    assert response.status_code == 200
+    assert b"Login" in response.data

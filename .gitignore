@@ -7,5 +7,5 @@ __pycache__
 .coverage
 .bash_history
 logs
-uploads
+
 database

@@ -24,4 +24,14 @@ def create_db_file_if_does_not_exist():
         os.mkdir(dbdir)
     db.create_all()
 
+@database.before_app_first_request
+def create_upload_folder():
+    root = config.Config.BASE_DIR
+    # set the name of the apps uploads folder for csv file
+    uploadfolder = os.path.join(root,'..',config.Config.UPLOAD_FOLDER)
+    # make a directory if it doesn't exist
+    if not os.path.exists(uploadfolder):
+        os.mkdir(uploadfolder)
+    db.create_all()
+
 

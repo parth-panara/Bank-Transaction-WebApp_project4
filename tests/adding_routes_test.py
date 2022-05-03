@@ -3,6 +3,10 @@ from flask import Flask
 import json
 
 from app.auth import browse_users
+from app import db
+import os
+from app import config
+
 
 def test_request_main_menu_links(client):
     """This makes the index page"""
@@ -47,3 +51,12 @@ def test_page_not_found(client):
     assert response.status_code == 404
     assert b"<h1>404</h1>" in response.data
     assert b"<h2>Oops! Looks like the page doesn't exist anymore</h2>" in response.data
+
+
+# test to check if the upload folder path is able to receive file in app #15
+def test_file_uploads(application, client):
+    root = config.Config.BASE_DIR
+    filepath = root + '/..app/uploads/'
+    uploadfolder = config.Config.UPLOAD_FOLDER
+    file_upload = os.path.join(uploadfolder)
+    assert os.path.exists(file_upload) == True

@@ -34,6 +34,23 @@ def test_myapp_logfile():
     filepath = os.path.join(log_dir, "myapp.log")
     assert os.path.isfile(filepath)
 
+#test to check if request.log file exists#22
+def test_logfile_request():
+    root = os.path.dirname(os.path.abspath(__file__))
+    logfile= os.path.join(root, '../logs/request.log')
+    assert os.path.exists(logfile) == True
+
+
+
+#second way to check if request.log file exists#22
+def test_request_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "request.log")
+    assert os.path.isfile(filepath)
+
+
+
+
 
 
 

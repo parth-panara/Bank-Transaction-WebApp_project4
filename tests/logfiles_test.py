@@ -63,6 +63,23 @@ def test_errors_logfile():
     assert os.path.isfile(filepath)
 
 
+#test to check if sqlalchemy.log file exists#24
+def test_logfile_sqlalchemy():
+    root = os.path.dirname(os.path.abspath(__file__))
+    logfile= os.path.join(root, '../logs/sqlalchemy.log')
+    assert os.path.exists(logfile) == True
+
+
+
+#second way to check if sqlalchemy.log file exists#24
+def test_sqlalchemy_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "sqlalchemy.log")
+    assert os.path.isfile(filepath)
+
+
+
+
 
 
 # test to check if the functions of logfiles are from 'init_py' is readable#20

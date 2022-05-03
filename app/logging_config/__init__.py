@@ -96,7 +96,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-
+        'file.handler.sqlalchemy': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'sqlalchemy.log'),
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
 
 
     },
@@ -111,6 +117,11 @@ LOGGING_CONFIG = {
             'handlers': ['default','file.handler'],
             'level': 'DEBUG',
             'propagate': True
+        },
+        'sqlalchemy.engine': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.sqlalchemy'],
+            'level': 'INFO',
+            'propagate': False
         },
         'myApp': {  # if __name__ == '__main__'
             'handlers': ['file.handler.myapp'],

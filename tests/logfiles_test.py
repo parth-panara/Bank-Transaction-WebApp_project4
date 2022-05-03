@@ -78,6 +78,19 @@ def test_sqlalchemy_logfile():
     assert os.path.isfile(filepath)
 
 
+#test to check if werkzeug.log file exists#25
+def test_logfile_werkzeug():
+    root = os.path.dirname(os.path.abspath(__file__))
+    logfile= os.path.join(root, '../logs/werkzeug.log')
+    assert os.path.exists(logfile) == True
+
+
+#second way to check if werkzeug.log file exists#25
+def test_werkzeug_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "werkzeug.log")
+    assert os.path.isfile(filepath)
+
 
 
 

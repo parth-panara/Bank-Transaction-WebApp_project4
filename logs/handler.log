@@ -1,0 +1,25 @@
+2022-05-03 07:02:13,371 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:13] "GET / HTTP/1.1" 200 -
+2022-05-03 07:02:13,427 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:02:13,451 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:13] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:02:14,884 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:14] "GET /about HTTP/1.1" 200 -
+2022-05-03 07:02:14,971 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:14] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:02:14,993 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:02:15,630 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:15] "GET /welcome HTTP/1.1" 200 -
+2022-05-03 07:02:15,687 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:15] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:02:15,717 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:02:16,579 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:16] "GET /register HTTP/1.1" 200 -
+2022-05-03 07:02:16,638 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:16] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:02:16,649 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:02:17,393 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:17] "GET /login HTTP/1.1" 200 -
+2022-05-03 07:02:17,442 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:17] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:02:17,461 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:02:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:05:57,606 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/adding_routes_test.py', reloading
+2022-05-03 07:12:06,796 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:06] "GET / HTTP/1.1" 200 -
+2022-05-03 07:12:07,019 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:12:07,094 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:07] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:12:07,982 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:07] "GET /about HTTP/1.1" 200 -
+2022-05-03 07:12:08,050 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:12:08,070 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:12:08,533 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "GET /welcome HTTP/1.1" 200 -
+2022-05-03 07:12:08,605 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
+2022-05-03 07:12:08,620 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

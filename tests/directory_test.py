@@ -1,10 +1,14 @@
+"""This test checks the Database, logs, and Uploads folder"""
 
+import logging
 import os
-from app.db import config
+from pathlib import Path
 from click.testing import CliRunner
-from app import create_database
-runner = CliRunner()
 
+from app import create_database
+import logs
+from app.db import config
+runner = CliRunner()
 
 # this test checks if the uploads folder is created for csv file#15
 def test_create_uploads_folder():
@@ -33,3 +37,14 @@ def test_auto_creat_database():
     # make a directory if it doesn't exist
     # make a directory if it doesn't exist
     assert os.path.exists(dbdir) == True
+
+
+# Test to check if Logs folder is created#19
+def test_create_log_folder():
+    logdir = config.Config.LOG_DIR
+    path = Path(logdir)
+
+    if path.is_file():
+        print(f'The file {logs} exists')
+    else:
+        print(f'The file {logs} does not exist')

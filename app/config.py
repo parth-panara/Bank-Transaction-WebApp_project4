@@ -15,7 +15,7 @@ class Config(object):
 
     UPLOAD_FOLDER =  os.getenv('UPLOAD_FOLDER', BASE_DIR + '/uploads')
 
-
+    LOG_DIR = os.path.join(BASE_DIR, '../logs')
 class ProductionConfig(Config):
     pass
 

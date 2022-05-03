@@ -1,12 +1,14 @@
 """This test the homepage"""
 from flask import Flask
 import json
-
+import logging
 from app.auth import browse_users
 from app import db
 import os
 from app import config
-
+import logs
+from app.db import config
+from pathlib import Path
 
 def test_request_main_menu_links(client):
     """This makes the index page"""
@@ -60,3 +62,7 @@ def test_file_uploads(application, client):
     uploadfolder = config.Config.UPLOAD_FOLDER
     file_upload = os.path.join(uploadfolder)
     assert os.path.exists(file_upload) == True
+
+
+
+

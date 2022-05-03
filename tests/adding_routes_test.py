@@ -63,6 +63,10 @@ def test_file_uploads(application, client):
     file_upload = os.path.join(uploadfolder)
     assert os.path.exists(file_upload) == True
 
-
-
+#test to check if the transaction route exists in apps#28
+def test_get_transaction_route(client):
+    """ tests /transactions """
+    response = client.get("/transactions")
+    # redirect bto page
+    assert response.status_code == 200
 

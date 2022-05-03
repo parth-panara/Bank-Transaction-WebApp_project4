@@ -59,3 +59,13 @@ def test_data_transactions(application, test_user):
     db.session.delete(trans2)
     db.session.commit()
     assert db.session.query(Transaction).count() == 1
+
+#test to check if the transaction route exists for logged in user#28
+
+def test_transactions_upload_auth(application, test_user):
+    """ access page while auth"""
+    # pylint: disable=unused-argument,redefined-outer-name
+
+    with application.test_client(test_user) as client:
+        resp = client.get("/transactions")
+        assert resp.status_code == 200

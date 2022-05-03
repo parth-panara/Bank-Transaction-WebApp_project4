@@ -23,3 +23,13 @@ def test_create_database():
     dbdir = os.path.join(root, '../database')
     # make a directory if it doesn't exist
     assert os.path.exists(dbdir) == True
+
+# this test checks if the database directory is created#18
+def test_auto_creat_database():
+
+    root = config.Config.BASE_DIR
+    # set the name of the apps database directory
+    dbdir = os.path.join(root,'..',config.Config.DB_DIR)
+    # make a directory if it doesn't exist
+    # make a directory if it doesn't exist
+    assert os.path.exists(dbdir) == True

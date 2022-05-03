@@ -21,6 +21,23 @@ def test_handler_logfile():
     assert os.path.isfile(filepath)
 
 
+#test to check if myapp.log file exists#21
+
+def test_logfile_myapp():
+    root = os.path.dirname(os.path.abspath(__file__))
+    logfile= os.path.join(root, '../logs/myapp.log')
+    assert os.path.exists(logfile) == True
+
+#second way to check if myapp.log file exists#21
+def test_myapp_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "myapp.log")
+    assert os.path.isfile(filepath)
+
+
+
+
+
 # test to check if the functions of logfiles are from 'init_py' is readable#20
 
 def test_add_path_to_logfile():

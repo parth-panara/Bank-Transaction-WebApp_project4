@@ -2,7 +2,7 @@ from os import getenv
 import datetime
 from app.auth.forms import login_form
 
-
+# this code shows environment context
 def utility_text_processors():
     message = "hello world"
     form = login_form()

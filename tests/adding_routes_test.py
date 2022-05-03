@@ -39,3 +39,11 @@ def test_user_user_management(client):
     assert '<h2>Login</h2>' in html
 
 
+# test to check if base html works but current user gets undefined 404 error #14
+
+def test_page_not_found(client):
+    """This tests getting a 404 error """
+    response = client.get("/foobar]")
+    assert response.status_code == 404
+    assert b"<h1>404</h1>" in response.data
+    assert b"<h2>Oops! Looks like the page doesn't exist anymore</h2>" in response.data

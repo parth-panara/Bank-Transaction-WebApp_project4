@@ -40,3 +40,10 @@ def test_request_login(client):
     response = client.get("/login")
     assert response.status_code == 200
     assert b"Login" in response.data
+
+# test to check if invalid simple page shows error #14
+
+def test_request_page_not_found(client):
+    """This checks the error"""
+    response = client.get("/page5")
+    assert response.status_code == 404

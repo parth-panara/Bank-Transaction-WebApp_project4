@@ -48,9 +48,19 @@ def test_request_logfile():
     filepath = os.path.join(log_dir, "request.log")
     assert os.path.isfile(filepath)
 
+#test to check if errors.log file exists#23
+def test_logfile_error():
+    root = os.path.dirname(os.path.abspath(__file__))
+    logfile= os.path.join(root, '../logs/errors.log')
+    assert os.path.exists(logfile) == True
 
 
+#second way to check if errors.log file exists#23
 
+def test_errors_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "errors.log")
+    assert os.path.isfile(filepath)
 
 
 

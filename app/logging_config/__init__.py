@@ -89,7 +89,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-
+        'file.handler.errors': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'errors.log'),
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
 
 
 
@@ -116,7 +122,11 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-
+        'myerrors': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.errors'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
 
 
 

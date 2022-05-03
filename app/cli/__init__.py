@@ -5,6 +5,8 @@ from flask.cli import with_appcontext
 from app.db import db
 
 
+# creat database and store in following directory
+
 @click.command(name='create-db')
 @with_appcontext
 def create_database():

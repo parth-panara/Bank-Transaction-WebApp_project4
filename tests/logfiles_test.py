@@ -92,6 +92,21 @@ def test_werkzeug_logfile():
     assert os.path.isfile(filepath)
 
 
+#test to check if csvfile.log file exists#25
+def test_logfile_csvfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "csvfile.log")
+    assert os.path.isfile(filepath)
+
+
+
+
+#second way to check if csvfile.log file exists#25
+def test_csvfile_logfile():
+    log_dir = app.config.Config.LOG_DIR
+    filepath = os.path.join(log_dir, "csvfile.log")
+    assert os.path.isfile(filepath)
+
 
 
 

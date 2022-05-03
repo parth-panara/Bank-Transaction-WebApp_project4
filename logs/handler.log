@@ -23,3 +23,4 @@
 2022-05-03 07:12:08,533 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "GET /welcome HTTP/1.1" 200 -
 2022-05-03 07:12:08,605 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
 2022-05-03 07:12:08,620 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 07:12:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-03 07:34:42,393 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/logfiles_test.py', reloading

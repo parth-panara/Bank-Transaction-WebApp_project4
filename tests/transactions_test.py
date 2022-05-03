@@ -1,7 +1,8 @@
 """This test the transactions"""
 import pytest
 
-
+import os
+from app import config
 from app import db
 from app.db.models import Transaction, User
 
@@ -69,3 +70,15 @@ def test_transactions_upload_auth(application, test_user):
     with application.test_client(test_user) as client:
         resp = client.get("/transactions")
         assert resp.status_code == 200
+
+#test to check if the transaction route exists for logged in user#29
+
+def test_transactions_upload_route(application, test_user):
+    """ access page while auth"""
+    # pylint: disable=unused-argument,redefined-outer-name
+
+    with application.test_client(test_user) as client:
+        resp = client.get("/transactions/upload", follow_redirects=True)
+        assert resp.status_code == 200
+
+

@@ -2,7 +2,7 @@
 import csv
 import logging
 import os
-
+from csv import DictReader
 from flask import Blueprint, render_template, abort, url_for,current_app
 from flask_login import current_user, login_required
 from jinja2 import TemplateNotFound
@@ -41,8 +41,8 @@ def transactions_upload():
         form.file.data.save(filepath)
         #user = current_user
         list_of_transactions = []
-        with open(filepath) as file:
-            csv_file = csv.DictReader(file)
+        with open(filepath, encoding="utf-8-sig" ) as file:
+            csv_file = csv.DictReader(file, dialect='excel' )
             for row in csv_file:
                 list_of_transactions.append(Transaction(row['AMOUNT'],row['TYPE']))
 

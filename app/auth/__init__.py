@@ -8,7 +8,9 @@ from werkzeug.security import generate_password_hash
 from app.auth.decorators import admin_required
 from app.auth.forms import login_form, register_form, profile_form, security_form, user_edit_form
 from app.db import db
-from app.db.models import User
+from app.db.models import User, Transaction
+from sqlalchemy import func
+from sqlalchemy.sql import func
 
 auth = Blueprint('auth', __name__, template_folder='templates')
 
@@ -61,7 +63,7 @@ def login():
 @login_required
 def dashboard():
     try:
-        return render_template('dashboard.html')
+        return render_template('dashboard.html',)
     except TemplateNotFound:
          return render_template('403.html')
 

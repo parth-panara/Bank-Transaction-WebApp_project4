@@ -5,7 +5,7 @@ import os
 from app import config
 from app import db
 from app.db.models import Transaction, User
-
+from sqlalchemy import func
 #adding user to test transaction database#27
 
 @pytest.fixture
@@ -39,22 +39,22 @@ def test_data_transactions(application, test_user):
 
     # functioons addding into the database
     transactions = []
-    transactions.append( Transaction(100, 'Deposit') )
-    transactions.append( Transaction(20, 'Withdrawl') )
+    transactions.append( Transaction(100, 'CREDIT') )
+    transactions.append( Transaction(-20, 'DEBIT') )
 
     user.transactions += transactions
     db.session.commit() # pylint: disable=no-member
     assert db.session.query(Transaction).count() == 2
 
     # reading the function
-    trans1 = Transaction.query.filter_by(type='Deposit').first()
+    trans1 = Transaction.query.filter_by(type='CREDIT').first()
     assert trans1.amount == 100
 
     # implement the function
     trans1.amount = 200
     db.session.commit() # pylint: disable=no-member
     trans2 = Transaction.query.filter_by(amount=200).first()
-    assert trans2.type == 'Deposit'
+    assert trans2.type == 'CREDIT'
 
     # deleting the data
     db.session.delete(trans2)
@@ -71,6 +71,10 @@ def test_transactions_upload_auth(application, test_user):
         resp = client.get("/transactions")
         assert resp.status_code == 200
 
+
+
+
+
 #test to check if the transaction route exists for logged in user#29
 
 def test_transactions_upload_route(application, test_user):
@@ -80,5 +84,13 @@ def test_transactions_upload_route(application, test_user):
     with application.test_client(test_user) as client:
         resp = client.get("/transactions/upload", follow_redirects=True)
         assert resp.status_code == 200
+
+
+
+
+
+
+
+
 
 

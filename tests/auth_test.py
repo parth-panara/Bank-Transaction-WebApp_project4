@@ -4,7 +4,8 @@ from app.db import db
 from app.db.models import User
 import os
 import io
-
+from tests.transactions_test import test_user
+from app import transactions
 
 def test_request_main_menu_links(client):
     """This makes the index page"""
@@ -114,5 +115,17 @@ def test_user_logout_fail_without_register(client, application):
         'confirm': '12345678'
     }, follow_redirects=False)
     assert response.status_code == 405
+
+
+#transactoion rout check if it shows the current balance#31
+def test_upload_dashboard(application, test_user):
+    """ test access to transactions when logged in """
+    # pylint: disable=redefined-outer-name,unused-argument
+    with application.test_client(test_user) as client:
+        resp = client.get('/transactions')
+    # check if successful at transaction dashboard
+    assert resp.status_code == 200
+    assert b'<h2>Browse: Transactions</h2>' in resp.data
+    # check if it's able to show current account balance according to database
 
 

@@ -12,7 +12,7 @@
 
 ## Project Description
 
-This is Final Project 4 of IS 601. we need to make a website that allows a user to register, login, and upload the CSV file included with the project repository. The user transaction managment dashboard must display a table of transactions and it must display the current balance of the account based on the transactions.  The starting balance of the account is 0 and is determined by adding and subtracting debits and credits to the account that are identified as such in the CSV file.
+This is Final Project 4 of IS 601. We need to make a website that allows a user to register, login, and upload the CSV file included with the project repository. The user transaction managment dashboard must display a table of transactions and it must display the current balance of the account based on the transactions.  The starting balance of the account is 0 and is determined by adding and subtracting debits and credits to the account that are identified as such in the CSV file.
 
 Requirements:
 

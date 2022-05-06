@@ -26,7 +26,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #fc0254 !important;
+    color: #ff6d00 !important;
 }
 
 .fs-20 {
@@ -62,5 +62,5 @@ body {
     font-size: 16px;
 }
 .homeText {
-    color: #fc0254;
+    color: #ff6d00;
 }

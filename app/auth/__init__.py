@@ -63,7 +63,7 @@ def login():
 @login_required
 def dashboard():
     try:
-        return render_template('dashboard.html',)
+        return render_template('dashboard.html')
     except TemplateNotFound:
          return render_template('403.html')
 

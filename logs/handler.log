@@ -70,3 +70,4 @@
 2022-05-03 08:38:58,827 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 08:38:58] "[33mGET /static/images/logo.jpg HTTP/1.1[0m" 404 -
 2022-05-03 08:38:58,835 [INFO] werkzeug: 192.168.176.1 - - [03/May/2022 08:38:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2022-05-03 08:42:11,192 [INFO] werkzeug:  * Detected change in '/home/myuser/app/logging_config/__init__.py', reloading
+2022-05-06 00:57:28,570 [INFO] app: Browse page loading

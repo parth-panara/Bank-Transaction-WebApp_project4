@@ -25,11 +25,11 @@ Requirements:
 
 We must
 
-A.  We need at least 25 unit tests, each unit test is worth 4 points.  There must be at least one test for each thing that the user does in the app.
-B.  We will need at least 25 commits (commit tests with their functional code in one commit)
-C.  Have the correct badge on our readme for the development and production workflows respectively 
-D.  We must link to your project on Heroku for dev and production respectively
-E.  We must submit a link to your project on GitHub
+A.  We need at least 25 unit tests, each unit test is worth 4 points.  There must be at least one test for each thing that the user does in the app.\
+B.  We will need at least 25 commits (commit tests with their functional code in one commit)\
+C.  Have the correct badge on our readme for the development and production workflows respectively\
+D.  We must link to your project on Heroku for dev and production respectively\
+E.  We must submit a link to your project on GitHub\
 
 
 ## Key component of this projects:

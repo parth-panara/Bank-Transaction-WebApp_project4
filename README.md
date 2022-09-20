@@ -1,4 +1,4 @@
-# IS601 Project-4
+# IS601 Project-4 - Bank Transaction App
 
 [![Production Workflow 1](https://github.com/parth-panara/IS601_project-4_parth/actions/workflows/prod.yml/badge.svg)](https://github.com/parth-panara/IS601_project-4_parth/actions/workflows/prod.yml)
 
